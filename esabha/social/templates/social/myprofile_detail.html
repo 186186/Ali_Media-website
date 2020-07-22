@@ -1,0 +1,20 @@
+{% extends 'base.html'%}
+{% load static %}
+{% load crispy_forms_tags %}
+{% block content %}
+<div class="p-5">
+    <h1> {{mypost.name}} </h1>
+    <p> <strong> age </strong> {{myprofile.age}} </p>
+    <p> <strong> Gender </strong> {{myprofile.gender}} </p>
+    <p> <strong> address </strong> {{myprofile.address}} </p>
+    <p> <strong> status </strong> {{myprofile.status}} </p>
+    <p> <strong> phone Number </strong> {{myprofile.phone_no}} </p>
+    <img class="img-fluid" src="/media/{{myprofile.pic}}" />
+<br>
+    <hr>
+    <a class="btn btn-dark" href="/myprofile"> Back </a>
+
+</div>
+
+
+{% endblock content %}

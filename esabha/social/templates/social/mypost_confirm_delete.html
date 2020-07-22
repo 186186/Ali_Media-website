@@ -1,0 +1,18 @@
+{% extends 'base.html'%}
+{% block content %}
+{% load crispy_forms_tags %}
+
+<h1 class="ProfileUpdateId"> Are you sure for Delete  </h1>
+<hr>
+<main class="p-5">
+
+<form enctype="multipart/form-data" method="post">
+    {% csrf_token %}
+    {{form | crispy}} <br>
+    <input class="btn btn-danger" type="submit">
+
+</form>
+
+</main>
+
+{% endblock content %}

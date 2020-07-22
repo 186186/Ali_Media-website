@@ -1,0 +1,54 @@
+{% extends 'base.html'%}
+{% load static %}
+{% block content %}
+<main class="p-5">
+ <div class="row">
+
+  <div class="col">
+
+   <h1 class="mycontacthead"> contact</h1>
+   <hr>
+
+<!--internal 1st class div end   -->
+  </div>
+<!-- main  row class 1 div end  -->
+ </div>
+
+<div class="row">
+ <div class="col-sm-6 ">
+  <form>
+   <input class="form-control" type="text" name="uname" placeholder="name" /> <br>
+   <input class="form-control" type="email" name="email" placeholder="email" /> <br>
+   <input class="form-control" type="tel" name="phone number" placeholder="Phone No" /> <br>
+   <textarea class="form-control" placeholder="MSG"></textarea> <br>
+   <button class="btn btn-dark btn-block" type="submit"> submit </button>
+
+  </form>
+
+<!--class 2 div 1 end  -->
+ </div>
+
+
+  <div class="col-sm-6">
+   <p>
+    <strong> Address :: Satellite Town, Hasilpur, Bahawalpur, Punjab</strong><br>
+     <strong> Phone No : 0303-76387877</strong><br>
+     <strong> Website : www.Esabha.com</strong><br>
+
+   </p>
+
+<!--class 2 div 2 end  -->
+ </div>
+ <div class="row my-5">
+
+  <div class="col-sm offset-sm-2">
+<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1733.0462511501028!2d72.5571385!3d29.6880977!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x393c57b0300f8cd9%3A0x87e29613872c0a3!2sSatellite%20Town%2C%20Hasilpur%2C%20Bahawalpur%2C%20Punjab!5e0!3m2!1sen!2s!4v1595150369765!5m2!1sen!2s" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+  </div>
+
+ </div>
+<!-- main class 2 end div -->
+</div>
+
+
+</main>
+{% endblock content  %}

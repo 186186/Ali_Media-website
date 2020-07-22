@@ -1,0 +1,36 @@
+{% extends 'base.html'%}
+{% load crispy_forms_tags %}
+{% load static %}
+{% block content %}
+<div class="p-5">
+    <h1> My post  </h1>
+    <hr>
+<form class="table">
+   <input value="{{ request.GET.si}}" type="text" name="si" />
+    <input class="btn btn-dark" type="submit" value="search" />
+</form><br>
+    <h1>  <a class="btn btn-dark" href="/mypost/create"> Add New post  </a> </h1>
+
+    <table class="table my-3">
+        <thead class="thead-dark">
+        <tr>
+            <th>Subject</th>
+            <th>Date</th>
+            <th>Detail</th>
+            <th> Delete </th>
+        </tr>
+        </thead>
+
+{% for n1 in mypost_list%}
+
+        <tr>
+            <td>{{n1.subjecct}}</td>
+            <td>{{n1.cr_date}}</td>
+            <td>  <a class="btn btn-dark" href="/mypost/{{n1.id}}"> <span class="fa fa-info"></span> </a> </td>
+            <td>  <a class="btn btn-danger" href="/mypost/delete/{{n1.id}}"> <span class="fa fa-trash"></span> </a> </td>
+        </tr>
+{% endfor %}
+
+    </table>
+</div>
+{% endblock content %}
